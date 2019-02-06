@@ -9,4 +9,5 @@ COPY . .
 RUN apk add --no-cache \
   git \
   gcc \
-  musl-dev
+  musl-dev \
+  curl
