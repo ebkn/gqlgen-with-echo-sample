@@ -50,5 +50,5 @@ func getCtxWithJWTCtxFromEchoCtx(ctx context.Context, c echo.Context) (context.C
 	if ok == false {
 		return nil, errors.New("auth_context_not_found")
 	}
-	return context.WithValue(ctx, AuthContextKeyType(authContextKey), token), nil
+	return context.WithValue(ctx, authContextKey, token), nil
 }
