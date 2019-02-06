@@ -5,5 +5,3 @@ ENV GO111MODULE on
 WORKDIR /go/src/app
 
 COPY . .
-
-RUN go install
