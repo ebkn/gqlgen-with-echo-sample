@@ -6,4 +6,6 @@ WORKDIR /go/src/app
 
 COPY . .
 
-RUN apk add --no-cache git
+RUN apk add --no-cache \
+  git \
+  gcc
