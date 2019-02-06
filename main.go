@@ -17,6 +17,7 @@ func main() {
 	e.Use(middleware.Recover())
 	e.Use(middleware.Logger())
 	e.POST("/login", login)
+	e.GET("/playground", echo.WrapHandler(handler.Playground("GraphQL playground", "/api/graphql")))
 
 	restricted := e.Group("/restricted")
 	restricted.Use(middleware.JWTWithConfig(middleware.JWTConfig{
