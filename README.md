@@ -11,5 +11,32 @@ $ git clone https://github.com/ebkn/gqlgen-with-echo-sample.git
 ```sh
 $ docker-compose up
 $ docker exec -it gqlgen-with-echo-sammple_app_1 sh
-# go run main.go
+(inside docker container) # go run *.go
+```
+
+##### get token
+```sh
+$ curl http://localhost:3000/login -X POST -d username=username -d password=password
+> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+##### try GraphQL
+open `http://localhost:3000/playground`
+
+set header (at bottom menu`HTTP HEADERS`)
+
+```sh
+{
+  "Authorization": "Bearer <input your token>"
+}
+```
+
+write query
+
+```graphql
+query {
+  user {
+    username
+  }
+}
 ```
