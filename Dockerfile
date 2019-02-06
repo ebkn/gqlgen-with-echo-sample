@@ -5,3 +5,5 @@ ENV GO111MODULE on
 WORKDIR /go/src/app
 
 COPY . .
+
+RUN apk add --no-cache git
