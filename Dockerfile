@@ -11,3 +11,6 @@ RUN apk add --no-cache \
   gcc \
   musl-dev \
   curl
+
+RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh \
+  && dep ensure
