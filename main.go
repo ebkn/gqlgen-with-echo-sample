@@ -45,5 +45,8 @@ func main() {
 		h.ServeHTTP(c.Response(), c.Request())
 		return nil
 	})
+
+	e.Logger.SetLevel(elog.INFO)
+	e.HideBanner = true
 	e.Logger.Fatal(e.Start(":3000"))
 }
