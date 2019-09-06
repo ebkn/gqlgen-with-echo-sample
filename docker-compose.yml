@@ -2,9 +2,10 @@ version: '3'
 
 services:
   app:
+    container_name: gqlgen-with-echo-sample_app
     build: .
     volumes:
-      - .:/go/src/app
+      - .:/app
     ports:
       - 3000:3000
     tty: true
