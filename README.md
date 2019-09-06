@@ -10,8 +10,8 @@ $ git clone https://github.com/ebkn/gqlgen-with-echo-sample.git
 ### Usage
 ```sh
 $ docker-compose up
-$ docker exec -it gqlgen-with-echo-sammple_app_1 sh
-(inside docker container) # go run *.go
+$ docker exec -it gqlgen-with-echo-sammple_app sh
+(inside docker container) # go run .
 ```
 
 ##### get token
